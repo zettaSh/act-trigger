@@ -1,10 +1,10 @@
 name: Github Actions Demo
 run-name: ${{ github.actor }} is testing out Github Actions 🚀
-on:
-  pull_request: yes
-  push:
-    branches:
-      - main
+on: [pull_request]
+  # pull_request: yes
+  # push:
+  #   branches:
+  #     - main
 jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-20.04
@@ -20,4 +20,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      
